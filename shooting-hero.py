@@ -177,6 +177,8 @@ while run:
                 2]:
                 man.hit()
                 score -= 5
+    else:
+        goblin = Enemy(100, 415, 64, 64, 450)
 
 
     if shootLoop > 0:
@@ -197,6 +199,8 @@ while run:
                     goblin.hit()
                     score += 1
                     bullets.pop(bullets.index(bullet))
+        else:
+            goblin = Enemy(100, 415, 64, 64, 450)
 
         if bullet.x < 500 and bullet.x > 0:
             bullet.x += bullet.vel
